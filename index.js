@@ -15,7 +15,7 @@ const uploadRouter = require("./routes/uploadRoute.js");
 const cors = require("cors");
 
 
-const PORT = 'https://eshop-backend-i9w7.onrender.com/';
+const PORT = 5000;
 dbConnect();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
