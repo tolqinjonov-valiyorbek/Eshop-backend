@@ -16,6 +16,7 @@ const createProduct = asyncHandler(async (req, res) => {
   }
 });
 
+
 const updateProduct = asyncHandler(async (req, res) => {
   const id = req.params;
   
@@ -100,6 +101,7 @@ const getAllProduct = asyncHandler(async (req, res) => {
     throw new Error(error);
   }
 });
+
 const addToWishlist = asyncHandler(async (req, res) => {
   const { _id } = req.user;
   const { prodId } = req.body;

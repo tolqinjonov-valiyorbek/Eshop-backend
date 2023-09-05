@@ -6,7 +6,6 @@ cloudinary.config({
   api_secret: 'r0YgD6Q11I_bcis7rg9N8F4Nog4' 
 });
 
-//CLOUDINARY_URL=cloudinary://142574686444258:r0YgD6Q11I_bcis7rg9N8F4Nog4@dn5g458zt
 
 const cloudinaryUploadImg = async (fileToUploads) => {
   return new Promise((resolve) => {

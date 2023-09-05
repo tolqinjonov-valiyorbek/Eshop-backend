@@ -10,6 +10,7 @@ const createBrand = asyncHandler(async (req, res) => {
     throw new Error(error);
   }
 });
+
 const updateBrand = asyncHandler(async (req, res) => {
   const { id } = req.params;
   validateMongoDbId(id);
@@ -57,3 +58,6 @@ module.exports = {
   getBrand,
   getallBrand,
 };
+
+
+

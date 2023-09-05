@@ -4,7 +4,9 @@ const express = require('express');
 const dbConnect = require('./config/dbConnect.js');
 const { notFound } = require('./middlewares/errorHandler.js');
 const app = express()
-const dotenv = require('dotenv').config();
+require('dotenv').config();
+
+
 const authRouter = require('./routes/authRoute'); 
 const productRouter = require("./routes/productRoute");
 const categoryRouter = require("./routes/prodcategoryRoute");

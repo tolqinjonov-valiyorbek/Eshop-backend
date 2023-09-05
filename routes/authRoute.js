@@ -27,6 +27,7 @@ const {
 const { authMiddleware } = require("../middlewares/authMiddleware.js");
 const router = express.Router();
 
+
 router.post("/forgot-password-token", forgotPasswordToken);
 router.post("/register", createUser);
 router.post("/login", loginUserCtrl);
@@ -43,9 +44,6 @@ router.get("/cart", authMiddleware, getUserCart);
 router.get("/getmyorders", authMiddleware, getMyOrders);
 router.get("/getallorders", authMiddleware, getAllOrders);
 router.post("/getorderbyuser/:id", authMiddleware, getAllOrders);
-// router.get("/getMonthOrder", authMiddleware, getMonthWiseOrderIncome);
-// router.get("/getMonthOrderCount", authMiddleware, getMonthWiseOrderCount);
-// router.get("/getyearorders", authMiddleware, getYearTotalOrders);
 
 router.delete("/:id", deleteaUser);
 router.put("/order/update-order/:id", authMiddleware, updateOrderStatus);

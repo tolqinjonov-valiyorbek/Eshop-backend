@@ -14,12 +14,13 @@ const storage = multer.diskStorage({
 });
 
 const multerFilter = (req, file, cb) => {
-  if (file.mimetype.startsWith("image")) {
+  if (file.mimetype.startsWith("auto")) {
     cb(null, true);
   } else {
     cb({ message: "Unsupported file format" }, false);
   }
 };
+
 
 const uploadPhoto = multer({
   storage: storage,
@@ -41,7 +42,7 @@ const productImgResize = async (req, res, next) => {
           .toFile(outputFilePath);
         fs.unlinkSync(file.path);
       } catch (error) {
-        console.error("Error blogs image:", error);
+        console.error("Error products image:", error);
       }
     })
   );

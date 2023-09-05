@@ -44,11 +44,7 @@ var productSchema = new mongoose.Schema(
         url: String,
       },
     ],
-    // color: {
-    //   type: String,
-    //   required:true,
-    // },
-    color:[{type: mongoose.Schema.Types.ObjectId, ref: "Color"}],
+    color: [{ type: mongoose.Schema.Types.ObjectId, ref: "Color" }],
     tags: String,
     ratings: [
       {
@@ -57,7 +53,7 @@ var productSchema = new mongoose.Schema(
         postedby: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
       },
     ],
-    
+
     totalrating: {
       type: String,
       default: 2,
